@@ -5,7 +5,8 @@ use CompanyDB
 select name, department_name
 from Employees e
 inner join Department d
-on e.department_id = 2             -- "2" is dept_id for IT
+on e.department_id = d.department_id
+where d.department_name = 'IT'
 
 --Write a query to list the names of employees who are part of a department that is assigned to any project.
 
